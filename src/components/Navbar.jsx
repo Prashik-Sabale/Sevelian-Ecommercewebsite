@@ -18,6 +18,8 @@ const Navbar = () => {
         setTotalQuantity(total);
     }, [carts])
 
+
+
     const [scroll, setScroll] = useState(false);
     useEffect(() => {
         window.addEventListener("scroll", () => {

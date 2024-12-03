@@ -5,12 +5,11 @@ import Footer from './components/Footer';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-// import NotFound from "./pages/NotFound";
+import NotFound from "./pages/NotFound";
 import ProductDetails from "./features/ProductDetails";
-import Cart from "./features/AddToCart/Cart";
+import Cart from "./components/CartTab";
 import Login from './features/Auth/Login';
 import SignUp from './features/Auth/SignUp';
-import ProductCard from './components/ProductCard';
 import CategoryCards from './components/CategoryCards';
 import ShirtCollection from './components/ShirtCollection';
 import TShirtCollection from './components/TShirtCollection';
@@ -38,6 +37,7 @@ function App() {
             <Route path="/products" element={<CategoryCards />} />
             <Route path="/Shirts" element={<ShirtCollection />} />
             <Route path="/TShirts" element={<TShirtCollection />} />
+            <Route path="/NotFound" element={<NotFound />} />
 
 
 

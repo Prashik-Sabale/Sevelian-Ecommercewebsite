@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { addToCart } from '../stores/cart';
 import { products } from '../services/Products';
 import { useDispatch } from 'react-redux';
 
 const ProductDetails = () => {
+    const navigate = useNavigate();
     const { slug } = useParams();
     const [detail, setDetail] = useState([]);
     const [quantity, setQuantity] = useState(1);
@@ -16,7 +18,8 @@ const ProductDetails = () => {
         if (findDetail.length > 0) {
             setDetail(findDetail[0]);
         } else {
-            window.location.href = '/';
+            navigate("/NotFound"); // Redirects to the Not Found page
+
         }
     }, [slug])
 

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const ProductCard = (props) => {
 
     const carts = useSelector(store => store.cart.items);
-    // console.log(carts);
+    console.log(carts);
 
 
     const { id, name, price, image, slug } = props.data;
