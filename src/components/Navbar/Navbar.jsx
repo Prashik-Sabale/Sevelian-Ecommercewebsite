@@ -4,7 +4,11 @@ import { IoBagOutline } from "react-icons/io5";
 import { IoSearch } from "react-icons/io5";
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import logo from '../assets/images/logo.png'
+import logo from '../../assets/images/logo.png'
+import NavLinks from './NavLinks';
+
+import { RxCross2 } from "react-icons/rx";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const Navbar = () => {
 
@@ -18,6 +22,7 @@ const Navbar = () => {
         setTotalQuantity(total);
     }, [carts])
 
+    const [open, setOpen] = useState(false);
 
 
     const [scroll, setScroll] = useState(false);
@@ -63,6 +68,14 @@ const Navbar = () => {
                                             className="hover:underline hover:underline-offset-4 hover:w-fit transition-all duration-100 ease-linear">
                                             <Link to="/contact">Contact</Link>
                                         </li>
+                                        {/* <NavLinks /> */}
+                                        <ul
+                                            className={`fixed top-0 z-50 bg-white w-2/3 h-screen shadow-2xl
+                                                md:hidden flex flex-col gap-10 text-medium  p-7 pt-20 duration-500
+                                                ${open ? "left-0" : "left-[-100%]"}`}
+                                        >
+                                            <NavLinks />
+                                        </ul>
                                     </ul>
                                 </div>
                                 <div className="hidden lg:flex lg:items-center gap-x-3">
@@ -78,8 +91,18 @@ const Navbar = () => {
                                         <div className=' absolute w-4 h-4 rounded-full z-10 right-[-3px] bottom-[-4px] flex items-center justify-center text-[9px] bg-black text-white'>{totalQuantity}</div>
                                     </div>
                                 </div>
+
+
+                                {/* Mobile Nav */}
+                                <ul
+                                    className={`fixed top-0 z-50 bg-white w-2/3 h-screen shadow-2xl
+                                        md:hidden flex flex-col gap-10 text-medium  p-7 pt-20 duration-500
+                                        ${open ? "left-0" : "left-[-100%]"}`}
+                                >
+                                    <NavLinks />
+                                </ul>
                                 <div className="flex items-center justify-center lg:hidden">
-                                    <button className="focus:outline-none text-slate-200 dark:text-white"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" className="text-2xl text-slate-800 :outline-none active:scale-110 active:text-red-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg></button>
+                                    <button onClick={() => setOpen(!open)} >{open ? <RxCross2 size={30} /> : <HiOutlineMenuAlt3 size={30} className='cursor-pointer' />}</button>
                                 </div>
                             </div>
                         </nav>

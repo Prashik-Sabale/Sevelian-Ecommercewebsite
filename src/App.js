@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Footer from './components/Footer';
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -14,7 +14,8 @@ import CategoryCards from './components/CategoryCards';
 import ShirtCollection from './components/ShirtCollection';
 import TShirtCollection from './components/TShirtCollection';
 import ProductDetailTShirt from './features/ProductDetailTShirt';
-
+// import Search from './components/SerachBox';
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
@@ -23,6 +24,10 @@ function App() {
     <div className="App">
       <Router>
         <div className="App">
+          <Toaster
+            position="top-center"
+            reverseOrder={false}
+          />
           <Navbar />
           {/* <Home />  */}
 
@@ -38,6 +43,7 @@ function App() {
             <Route path="/Shirts" element={<ShirtCollection />} />
             <Route path="/TShirts" element={<TShirtCollection />} />
             <Route path="/NotFound" element={<NotFound />} />
+            {/* <Route path="/Search" element={<Search />} /> */}
 
 
 
