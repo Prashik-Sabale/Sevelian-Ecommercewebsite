@@ -6,19 +6,17 @@ import { Link } from 'react-router-dom';
 const ProductCard = (props) => {
 
     const carts = useSelector(store => store.cart.items);
+    // console.log(carts);
 
-    const { id, name, price, image, slug, } = props.data;
+
+    const { id, name, price, image, slug } = props.data;
     const dispatch = useDispatch();
-
     const handleAddToCart = () => {
         dispatch(addToCart({
             productId: id,
-            name: name,
-            price: price,
-            image: image,
+            quantity: 1
         }));
     }
-
     return (
         <div>
             <div className=' cursor-pointer rounded-2xl h-[300px] flex items-center justify-center  '>
@@ -39,7 +37,7 @@ const ProductCard = (props) => {
                         {/* <span className='text-green-600'>{off}</span> */}
                     </p>
                 </div>
-                <button onClick={handleAddToCart} className="bg-black flex items-center w-full px-5 py-2.5  text-center text-sm font-medium justify-center text-white rounded-md hover:bg-gray-700 transition-colors rounded-md " >Add Bag</button>
+                <button onClick={handleAddToCart} className="bg-black flex items-center w-full px-5 py-2.5  text-center text-sm font-medium justify-center text-white rounded-md hover:bg-gray-700 transition-colors  " >Add Bag</button>
             </div>
         </div>
     )
