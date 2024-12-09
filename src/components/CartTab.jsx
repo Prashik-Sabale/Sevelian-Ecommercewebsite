@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { FaRegHeart } from 'react-icons/fa';  // Importing icons
 import CartItem from '../components/cartItem';
 import { products } from '../services/Products';
+import { Link } from 'react-router-dom';
 
 const CartTab = () => {
     const carts = useSelector(store => store.cart.items);
@@ -51,9 +52,9 @@ const CartTab = () => {
                             <span>Total</span>
                             <span>${calculateTotal().toFixed(2)}</span>
                         </div>
-                        <button className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 transition-all duration-200">
+                        <Link to="/checkout"><button className="w-full bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 transition-all duration-200">
                             Proceed to Checkout
-                        </button>
+                        </button></Link>
                     </div>
                 </div>
             )}

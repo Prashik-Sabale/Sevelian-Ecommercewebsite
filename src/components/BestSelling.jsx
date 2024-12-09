@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { products } from '../Data/BestSellingProducts';
+import { Link } from 'react-router-dom';
 import ProductCard from './ProductCard';
 
 const BestSelling = () => {
@@ -23,8 +24,8 @@ const BestSelling = () => {
                     )}
                 </div>
                 <div className=' text-center'>
-                    <button onClick={() => { setIsToggle(!isToggle) }} className=" w-full md:w-auto mt-10 mb-14 inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-black shadow-xs  transition-all duration-500">Shop all
-                    </button>
+                    <Link to="/Shirts"><button onClick={() => { setIsToggle(!isToggle) }} className=" w-full md:w-auto mt-10 mb-14 inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-black shadow-xs  transition-all duration-500">Shop all
+                    </button></Link>
                 </div>
             </div>
         </div>

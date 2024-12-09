@@ -16,6 +16,8 @@ import TShirtCollection from './components/TShirtCollection';
 import ProductDetailTShirt from './features/ProductDetailTShirt';
 // import Search from './components/SerachBox';
 import { Toaster } from 'react-hot-toast';
+import Checkout from './components/Checkout';
+import CheckoutPage from './components/CheckoutPage';
 
 
 function App() {
@@ -42,6 +44,8 @@ function App() {
             <Route path="/products" element={<CategoryCards />} />
             <Route path="/Shirts" element={<ShirtCollection />} />
             <Route path="/TShirts" element={<TShirtCollection />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/checkoutpage" element={<CheckoutPage />} />
             <Route path="/NotFound" element={<NotFound />} />
             {/* <Route path="/Search" element={<Search />} /> */}
 

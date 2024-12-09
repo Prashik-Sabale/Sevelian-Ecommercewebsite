@@ -37,7 +37,7 @@ const NavLinks = () => {
           <a href={link.link}>{link.name}</a>
         </li>
       ))}
-      <div className='grid grid-cols-2 mt-40'>
+      <div className='grid grid-cols-2 mt-44'>
         <button className=' text-black' ><PiUser size={25} /></button>
         <Link to="/Login"><span className=" pt-2">Log in</span></Link>
       </div>
