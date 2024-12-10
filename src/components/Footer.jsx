@@ -32,7 +32,7 @@ const Footer = () => {
                         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                         <span className="block text-sm  sm:text-center text-black">© 2024 <Link to="/Home" target='blank' className="hover:underline">Sevelian™</Link>. All Rights Reserved.</span><br />
                         <h1>
-                            Made with ❤ by <a href="https://github.com/Prashik-Sabale">Prashik</a>{" "}
+                            Made with ❤ by <a href="https://github.com/Prashik-Sabale">Prashik</a>
                         </h1>
                     </div>
                 </footer>

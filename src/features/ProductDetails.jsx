@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { addToCart } from '../stores/cart';
-import { products } from '../services/Products';
+import { products } from '../Data/Products';
 import { useDispatch } from 'react-redux';
 
 const ProductDetails = () => {
@@ -42,7 +42,7 @@ const ProductDetails = () => {
                         </div>
                         <div class="md:py-8">
                             <div class="mb-2 md:mb-3">
-                                <span class="mb-0.5 inline-block text-gray-500">Fancy Brand</span>
+                                <span class="mb-0.5 inline-block text-gray-500">Elegant Clothing brands</span>
                                 <h2 class="text-2xl font-bold text-gray-800 lg:text-3xl">{detail.name}</h2>
                             </div>
                             <div class="mb-6 flex items-center md:mb-10">
@@ -95,8 +95,8 @@ const ProductDetails = () => {
                             </div>
                             <div class="mb-4">
                                 <div class="flex items-end gap-2">
-                                    <span class="text-xl font-bold text-gray-800 md:text-2xl">${detail.price}</span>
-                                    <span class="mb-0.5 text-red-500 line-through">$30.00</span>
+                                    <span class="text-xl font-bold text-gray-800 md:text-2xl">₹{detail.price}</span>
+                                    <span class="mb-0.5 text-red-500 line-through">₹30.00</span>
                                 </div>
 
                                 <span class="text-sm text-gray-500">incl. VAT plus shipping</span>

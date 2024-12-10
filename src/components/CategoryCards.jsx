@@ -1,5 +1,5 @@
 import React from 'react';
-import { products } from '../services/Products';
+import { products } from '../Data/Products';
 import ProductCard from './ProductCard';
 
 const CategoryCards = () => {

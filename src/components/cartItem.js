@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';  // Import Trash Icon
 import { useDispatch } from 'react-redux';
 import { changeQuantity, removeFromCart } from '../stores/cart';
-import { products } from '../services/Products';
+import { products } from '../Data/Products';
 
 const CartItem = (props) => {
     const { productId, quantity } = props.data;
@@ -37,7 +37,7 @@ const CartItem = (props) => {
             <img src={detail.image} alt={detail.name} className="w-24 h-24 object-cover rounded-md" />
             <div className="ml-4 flex-grow">
                 <h2 className="text-xl font-semibold">{detail.name}</h2>
-                <p className="text-gray-600">Price: ${detail.price}</p>
+                <p className="text-gray-600">Price: ₹{detail.price}</p>
                 <div className="flex items-center mt-2">
                     <button
                         className='w-8 h-8 text-white bg-black rounded-full'

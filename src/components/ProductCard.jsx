@@ -39,7 +39,7 @@ const ProductCard = (props) => {
                 <div class="mt-2 mb-5 flex items-center justify-between">
                     <p>
                         <span class="text-2xl font-bold text-slate-900">₹{price}</span>
-                        <span class="text-sm text-slate-900 line-through px-2">₹699</span>
+                        <span class="text-sm text-red-500 line-through px-2">₹3000</span>
                         {/* <span className='text-green-600'>{off}</span> */}
                     </p>
                 </div>
