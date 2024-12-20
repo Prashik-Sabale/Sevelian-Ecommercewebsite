@@ -104,7 +104,7 @@ const Navbar = () => {
                                 >
                                     <NavLinks />
                                 </ul>
-                                <div className="flex items-center justify-center lg:hidden">
+                                <div className="flex items-center justify-center gap-3 lg:hidden">
                                     <IoSearch onClick={() => dispatch(openTab())} className='text-xl ' />
                                     <button onClick={() => setOpen(!open)} >{open ? <RxCross2 size={30} /> : <HiOutlineMenuAlt3 size={30} className='cursor-pointer' />}</button>
                                 </div>
