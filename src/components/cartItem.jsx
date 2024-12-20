@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { FaTrashAlt } from 'react-icons/fa';  // Import Trash Icon
+import { FaTrash } from "react-icons/fa";
 import { useDispatch } from 'react-redux';
 import { changeQuantity, removeFromCart } from '../stores/cart';
 import { products } from '../Data/Products';
+// import { items } from '../Data/Tshirts';
 
 const CartItem = (props) => {
     const { productId, quantity } = props.data;
+
     const [detail, setDetail] = useState([]);
     const dispatch = useDispatch();
 
@@ -13,6 +15,11 @@ const CartItem = (props) => {
         const findDetail = products.filter(product => product.id === productId)[0];
         setDetail(findDetail);
     }, [productId]);
+
+    // useEffect(() => {
+    //     const findDetail = items.filter(item => item.id === productId)[0];
+    //     setDetail(findDetail);
+    // }, [productId]);
 
     const handleMinusQuantity = () => {
         dispatch(changeQuantity({
@@ -58,7 +65,7 @@ const CartItem = (props) => {
                 onClick={() => handleRemove(productId)}
                 className="text-red-600 hover:underline font-semibold ml-4 flex items-center"
             >
-                <FaTrashAlt className="mr-2" /> Remove
+                <FaTrash className="mr-2" /> Remove
             </button>
         </div>
     );

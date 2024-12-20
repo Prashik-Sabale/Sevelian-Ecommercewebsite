@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png'
 import NavLinks from './NavLinks';
 
+import { openTab } from '../../stores/cart';
 import { RxCross2 } from "react-icons/rx";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
@@ -23,6 +24,7 @@ const Navbar = () => {
     }, [carts])
 
     const [open, setOpen] = useState(false);
+    const [showModal, setshowModal] = useState(false);
 
 
     const [scroll, setScroll] = useState(false);
@@ -70,7 +72,7 @@ const Navbar = () => {
                                         </li>
                                         {/* <NavLinks /> */}
                                         <ul
-                                            className={`fixed top-0 z-50 bg-white w-2/3 h-screen shadow-2xl
+                                            className={`fixed top-0 z-50 bg-black w-2/3 h-screen shadow-2xl
                                                 md:hidden flex flex-col gap-10 text-medium  p-7 pt-20 duration-500
                                                 ${open ? "left-0" : "left-[-100%]"}`}
                                         >
@@ -80,7 +82,8 @@ const Navbar = () => {
                                 </div>
                                 <div className="hidden lg:flex lg:items-center gap-x-3">
 
-                                    <button className="flex items-center text-black  justify-center px-2 py-2 font-semibold"><IoSearch className='text-xl' /></button>
+
+                                    <button onClick={() => dispatch(openTab())} className="flex items-center text-black  justify-center px-2 py-2 font-semibold"><IoSearch className='text-xl' /></button>
 
                                     {/* {showModal && <Modal onclose={() => { setshowModal(false) }} />} */}
 
@@ -102,6 +105,7 @@ const Navbar = () => {
                                     <NavLinks />
                                 </ul>
                                 <div className="flex items-center justify-center lg:hidden">
+                                    <IoSearch onClick={() => dispatch(openTab())} className='text-xl ' />
                                     <button onClick={() => setOpen(!open)} >{open ? <RxCross2 size={30} /> : <HiOutlineMenuAlt3 size={30} className='cursor-pointer' />}</button>
                                 </div>
                             </div>

@@ -18,6 +18,7 @@ const ProductDetails = () => {
         if (findDetail.length > 0) {
             setDetail(findDetail[0]);
         } else {
+            window.location.href = '/';
             navigate("/NotFound"); // Redirects to the Not Found page
 
         }
@@ -109,6 +110,10 @@ const ProductDetails = () => {
 
                                 <span class="text-sm">2-4 day shipping</span>
                             </div>
+                            <div className=' mb-5'>
+                                <div class="bg-green-500 w-4 h-4 rounded-full "></div>
+                                <p class="ml-[25px] text-xs mt-[-16px]">50+ pcs. in stock.</p>
+                            </div>
                             <div class="flex gap-2.5">
 
                                 <button href="#" onClick={handleAddToCart} class="inline-block flex-1 rounded-lg bg-black px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-text-slate-900 focus-visible:ring active:bg-black sm:flex-none md:text-base">Add to cart</button>
@@ -121,7 +126,23 @@ const ProductDetails = () => {
                                 <p class="text-gray-500">
                                     {detail.description}<br /><br />
 
-                                    This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.
+                                    <b>Size & Fit</b><br />
+
+                                    Fit - slim fit
+                                    Size - Model is wearing M size
+                                    <br /><br />
+
+                                    <b>Wash Care</b><br />
+                                    Machine Wash
+                                    <br /><br />
+
+                                    <b>Specifications</b><br />
+                                    casual wear, college wear<br />
+                                    Plain<br />
+                                    button down<br />
+                                    100% linen<br />
+                                    full sleeve<br />
+                                    <br />
                                 </p>
                             </div>
                         </div>

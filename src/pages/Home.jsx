@@ -37,9 +37,9 @@ const Home = () => {
                 </section>
                 <div className="mx-auto max-w-7xl px-4  pt-10 sm:px-6 lg:px-8 relative text-center">
                     <span className="relative flex justify-center">
-                        <h1 className="relative z-10 bg-white text-3xl  font-bold px-6 pb-3">Top Collections</h1>
+                        <h1 className="relative z-10 bg-white text-3xl font-bold px-6 pb-3">Top Collections</h1>
                     </span>
-                    <span className=' pt-3 text-gray-500 '>Express your style with our standout collection—fashion meets sophistication.</span>
+                    <span className=' pt-3 text-gray-500 '>Express your style with our standout collection—fashion meets sophistication.</span><br /><br />
 
                     <div className='container flex justify-center pt-8 gap-20'>
                         <div><Link to="/Shirts"><img src={cat1} className="h-30 w-40 rounded-full cursor-pointer" alt="" /></Link>Shirts</div>

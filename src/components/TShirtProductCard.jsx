@@ -7,7 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 
 
-const ProductCard = (props) => {
+const TShirtProductCard = (props) => {
 
     const carts = useSelector(store => store.cart.items);
     console.log(carts);
@@ -84,4 +84,4 @@ const ProductCard = (props) => {
     )
 }
 
-export default ProductCard;
+export default TShirtProductCard;

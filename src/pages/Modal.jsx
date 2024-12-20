@@ -1,13 +1,14 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const Modal = ({ onclose }) => {
   return (
     <>
       <div className='fixed inset-0 bg-black bg-opacity-30 backdrop:blur-md flex justify-center items-center z-30'>
         <div className=' flex flex-col gap-5 text-white'>
-          <button onClick={onclose} className='place-self-end'><FontAwesomeIcon icon={faXmark} size={40} /></button>
+          <button onClick={onclose} className='place-self-end'>dkjd</button>
+          {/* <FontAwesomeIcon icon={faXmark} size={40} /> */}
 
           <form class="max-w-md w-96 mx-auto">
             <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>

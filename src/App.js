@@ -10,28 +10,33 @@ import ProductDetails from "./features/ProductDetails";
 import Cart from "./components/CartTab";
 import Login from './features/Auth/Login';
 import SignUp from './features/Auth/SignUp';
-import CategoryCards from './components/CategoryCards';
+// import CategoryCards from './components/CategoryCards';
 import ShirtCollection from './components/ShirtCollection';
 import TShirtCollection from './components/TShirtCollection';
 import ProductDetailTShirt from './features/ProductDetailTShirt';
-// import Search from './components/SerachBox';
 import { Toaster } from 'react-hot-toast';
 import Checkout from './components/Checkout';
-// import Loader from './features/Loader';
+// import SearchBar from './components/SearchBar';
+import Loader from './features/Loader';
+import AddProduct from './Admin/AddProduct';
+import SearchTab from './components/SearchTab';
+import { useSelector } from 'react-redux';
 
 
 function App() {
+  const { isOpen } = useSelector((state) => state.cart)
 
   return (
     <div className="App">
       <Router>
         <div className="App">
           <Toaster
-            position="top-center"
+            position="top-right"
             reverseOrder={false}
           />
           <Navbar />
-          {/* <Loader show={true} /> */}
+          {isOpen && <SearchTab />}
+          <Loader show={false} />
           {/* <Home />  */}
 
           {/* Routes for the application */}
@@ -42,12 +47,15 @@ function App() {
             <Route path="/Login" element={<Login />} />
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/products" element={<CategoryCards />} />
+            {/* <Route path="/products" element={<CategoryCards />} /> */}
+            <Route path="/products" element={<ShirtCollection />} />
             <Route path="/Shirts" element={<ShirtCollection />} />
             <Route path="/TShirts" element={<TShirtCollection />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/NotFound" element={<NotFound />} />
+            <Route path="/Add" element={<AddProduct />} />
             {/* <Route path="/Search" element={<Search />} /> */}
+
 
 
 

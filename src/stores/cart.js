@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     items: localStorage.getItem("carts") ? JSON.parse(localStorage.getItem("carts")) : [],
     items: [],
-    statusTab: false
+    statusTab: false,
+    isOpen: false
 }
 const cartSlice = createSlice({
     name: 'cart',
@@ -41,8 +42,11 @@ const cartSlice = createSlice({
             } else {
                 state.statusTab = false;
             }
+        },
+        openTab: (state) => {
+            state.isOpen = !state.isOpen;
         }
     }
 })
-export const { addToCart, changeQuantity, toggleStatusTab, removeFromCart } = cartSlice.actions;
+export const { addToCart, changeQuantity, toggleStatusTab, removeFromCart, openTab } = cartSlice.actions;
 export default cartSlice.reducer;

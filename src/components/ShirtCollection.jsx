@@ -1,8 +1,59 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ProductCard from './ProductCard';
 import { products } from '../Data/Products';
+import axios from 'axios';
+
+// import { useEffect, useParams, useState } from 'react';
+// import axios from 'axios';
 
 const ShirtCollection = () => {
+
+    const Axios = () => {
+        const getData = async () => {
+
+            axios.get("http://localhost:8080/api/products").then((res) => {
+                console.log(res);
+
+            }).catch((err) => {
+                console.log(err);
+
+            })
+            // const res = await fetch("http://localhost:8080/api/products");
+            // const jsonData = await res.json();
+            // console.log(jsonData);
+        }
+
+        useEffect(() => {
+            getData()
+        }, [])
+
+    }
+
+    // const { id } = useParams();
+    // const [product, setProduct] = useState(null);
+    // useEffect(() => {
+    //     const fetchProduct = async () => {
+    //         try {
+    //             const response = await axios.get(`http://localhost:8080/api/product/${id}`);
+    //             setProduct(response.data);
+    //             console.log(response.data);
+    //         } catch (error) {
+    //             console.error("Error fetching product:", error);
+    //         }
+    //     };
+
+    //     fetchProduct();
+    // }, [id]);
+    // if (!product) {
+    //     return (
+    //         <h2 className="text-center" style={{ padding: "10rem" }}>
+    //             Loading...
+    //         </h2>
+    //     );
+    // }
+
+
+
 
     return (
         <div>

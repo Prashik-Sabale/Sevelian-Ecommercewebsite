@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { FaShoppingCart, FaTruck, FaRegHeart } from 'react-icons/fa';
+import { FaTruck, FaRegHeart } from 'react-icons/fa';
 import CartItem from '../components/cartItem';
 import { products } from '../Data/Products';
 import { Link } from 'react-router-dom';
@@ -19,13 +19,14 @@ const CartTab = () => {
     return (
         <div className="bg-gray-100 min-h-screen p-8">
             <h1 className="text-3xl font-bold text-center mb-6 text-black flex items-center justify-center">
-                <FaShoppingCart className="mr-2 text-black" /> Shopping Cart
+                Shopping Cart
             </h1>
 
             {/* Check if the cart is empty */}
             {carts.length === 0 ? (
                 <div className="text-center text-xl text-gray-600 mt-8">
-                    <p className="mt-40">Your cart is empty</p>
+                    <p className="mt-40">Your cart is currently empty.</p>
+
                     <FaRegHeart className="mx-auto mt-4 text-4xl text-gray-400" />
                 </div>
             ) : (
