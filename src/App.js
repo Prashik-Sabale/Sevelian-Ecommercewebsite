@@ -18,7 +18,6 @@ import { Toaster } from 'react-hot-toast';
 import Checkout from './components/Checkout';
 // import SearchBar from './components/SearchBar';
 import Loader from './features/Loader';
-import AddProduct from './Admin/AddProduct';
 import SearchTab from './components/SearchTab';
 import { useSelector } from 'react-redux';
 
@@ -53,7 +52,6 @@ function App() {
             <Route path="/TShirts" element={<TShirtCollection />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/NotFound" element={<NotFound />} />
-            <Route path="/Add" element={<AddProduct />} />
             {/* <Route path="/Search" element={<Search />} /> */}
 
 

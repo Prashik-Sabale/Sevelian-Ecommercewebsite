@@ -10,7 +10,6 @@ import toast, { Toaster } from 'react-hot-toast';
 const ProductCard = (props) => {
 
     const carts = useSelector(store => store.cart.items);
-    console.log(carts);
 
 
     // const notify = () => toast.success('Successfully Added !');

@@ -4,6 +4,7 @@ import { FaTruck, FaRegHeart } from 'react-icons/fa';
 import CartItem from '../components/cartItem';
 import { products } from '../Data/Products';
 import { Link } from 'react-router-dom';
+import emptycartimg from '../assets/images/emptyCart.png';
 
 const CartTab = () => {
     const carts = useSelector(store => store.cart.items);
@@ -21,13 +22,13 @@ const CartTab = () => {
             <h1 className="text-3xl font-bold text-center mb-6 text-black flex items-center justify-center">
                 Shopping Cart
             </h1>
-
             {/* Check if the cart is empty */}
             {carts.length === 0 ? (
                 <div className="text-center text-xl text-gray-600 mt-8">
-                    <p className="mt-40">Your cart is currently empty.</p>
-
-                    <FaRegHeart className="mx-auto mt-4 text-4xl text-gray-400" />
+                    <div className=' flex justify-center'>
+                        <img src={emptycartimg} className='size-80 mt-10' alt="" srcset="" />
+                    </div>
+                    {/* <p className=" mt-3">Your cart is currently empty.</p> */}
                 </div>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

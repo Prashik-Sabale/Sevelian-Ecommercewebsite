@@ -4,6 +4,7 @@ import { IoSearch } from "react-icons/io5";
 import { useDispatch } from 'react-redux';
 import { openTab } from '../stores/cart';
 
+
 const SearchTab = () => {
     const dispatch = useDispatch();
     return (
