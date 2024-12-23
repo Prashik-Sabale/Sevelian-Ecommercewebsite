@@ -3,6 +3,8 @@ import { FaXmark } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
 import { useDispatch } from 'react-redux';
 import { openTab } from '../stores/cart';
+import { products } from '../Data/Products';
+import ProductCard from './ProductCard';
 
 
 const SearchTab = () => {
@@ -13,7 +15,7 @@ const SearchTab = () => {
                 <div className="p-4 sm:p-7">
                     <div className="flex items-center justify-between">
                         <div className="w-full">
-                            <div className="flex items-center bg-white border border-gray-300 rounded-3xl shadow-sm px-4 py-2 sm:py-4 w-full mx-auto">
+                            <div className="flex items-center bg-white border border-gray-950 rounded-full shadow-sm px-4 py-2 sm:py-4 w-full mx-auto">
                                 <IoSearch className="text-gray-500 mr-2 sm:mr-3" size={20} />
                                 <input
                                     type="text"
@@ -29,6 +31,16 @@ const SearchTab = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div>
+                    <p className="mx-auto text-center mt-4 max-w-md text-gray-500">
+                        All new Linen Shirts , Our Popular Products
+                    </p>
+                </div>
+                <div className='section grid grid-cols-2'>
+                    {products.map((product, key) =>
+                        <ProductCard key={key} data={product} />
+                    )}
                 </div>
             </div>
         </div>

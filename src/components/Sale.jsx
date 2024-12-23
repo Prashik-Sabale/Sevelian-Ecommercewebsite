@@ -49,7 +49,7 @@ const Sale = () => {
                     </a>
 
                     <p className="mt-8 text-xs font-medium uppercase text-gray-400">
-                        Offer valid until 24th March, 2024 *
+                        Offer valid until 7 th November, 2025 *
                     </p>
                 </div>
             </section>

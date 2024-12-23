@@ -28,6 +28,9 @@ const CartTab = () => {
                     <div className=' flex justify-center'>
                         <img src={emptycartimg} className='size-80 mt-10' alt="" srcset="" />
                     </div>
+                    <Link to="/products"><button className="w-30 mt-5 bg-black text-white py-2 px-4 transition-all duration-200">
+                        Start shopping
+                    </button></Link>
                     {/* <p className=" mt-3">Your cart is currently empty.</p> */}
                 </div>
             ) : (
