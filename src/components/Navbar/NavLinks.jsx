@@ -31,16 +31,16 @@ const NavLinks = () => {
   return (
     <>
       <div className="mb-20">
-        <Link to='/'><img src={logo} className=" h-8 w-45" alt="" /></Link>
+        <Link to='/'><img src={logo} className=" h-9 w-30" alt="" /></Link>
       </div>
       {Links.map((link, i) => (
-        <li key={i} className="font-semibold text-2xl hover:text-primary">
+        <li key={i} className="font-semibold text-xl hover:text-primary">
           <a href={link.link}>{link.name}</a>
         </li>
       ))}
       <div className='grid grid-cols-2 mt-auto'>
-        <PiUser size={30} />
-        <button className="w-full bg-black  text-white py-2 px-4 rounded-md hover:bg-gray-800 transition-all duration-200">
+        <PiUser size={28} />
+        <button className="w-full bg-black  text-white py-2 px-4 hover:bg-gray-800 transition-all duration-200">
           Log in
         </button>
       </div>
