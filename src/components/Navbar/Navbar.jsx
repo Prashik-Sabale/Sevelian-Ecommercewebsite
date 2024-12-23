@@ -72,7 +72,7 @@ const Navbar = () => {
                                     {/* <NavLinks /> */}
                                     <ul
                                         className={`fixed top-0 z-50 bg-black w-2/3 h-screen shadow-2xl
-                                                md:hidden flex flex-col gap-10 text-medium  p-7 pt-20 duration-500
+                                                md:hidden flex flex-col gap-10  p-7 pt-20 duration-500
                                                 ${open ? "left-0" : "left-[-100%]"}`}
                                     >
                                         <NavLinks />
