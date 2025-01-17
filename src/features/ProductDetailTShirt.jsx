@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { addToCart } from '../stores/cart';
+import toast from "react-hot-toast";
 import { items } from '../Data/Tshirts';
 import { useDispatch } from 'react-redux';
 
@@ -27,6 +28,7 @@ const ProductDetailTShirt = () => {
         setQuantity(quantity + 1);
     }
     const handleAddToCart = () => {
+        toast.success("Item added to your cart! 🎉");
         dispatch(addToCart({
             productId: detail.id,
             quantity: quantity

@@ -28,6 +28,11 @@ const Sale = () => {
 
                 <div className="p-4 text-center sm:p-6 md:col-span-2 lg:p-8">
                     <p className="text-sm font-semibold uppercase pb-4 tracking-widest">Run with the pack</p>
+                    <div class="relative inline-flex m-5">
+                        <div class="w-4 h-4 bg-red-600 rounded-full"></div>
+                        <div class="w-4 h-4 bg-red-600 rounded-full absolute top-0 left-0 animate-ping"></div>
+                        <div class="w-4 h-4 bg-red-600 rounded-full absolute top-0 left-0 animate-pulse"></div>
+                    </div>
                     <span
                         className="whitespace-nowrap rounded-full border border-red-600 px-2.5 py-0.5 text-sm text-red-600"
                     >

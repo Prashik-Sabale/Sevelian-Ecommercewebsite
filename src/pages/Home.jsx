@@ -6,6 +6,7 @@ import Support from '../components/Support';
 import Sale from '../components/Sale';
 import BestSelling from '../components/BestSelling';
 import ShowCards from '../components/ShowCards';
+import LinenInfo from '../components/LinenInfo';
 
 const Home = () => {
     const [isToggled, setIsToggled] = useState(false);
@@ -48,6 +49,7 @@ const Home = () => {
                 </div>
                 <Sale />
                 <BestSelling />
+                <LinenInfo />
                 <ShowCards />
                 <Support />
             </div>

@@ -11,11 +11,11 @@ const SearchTab = () => {
     const dispatch = useDispatch();
     return (
         <div className="bg-black bg-opacity-50 fixed z-50 top-0 left-0 w-full h-screen">
-            <div className="h-full bg-white sm:w-[30rem] w-full min-w-[15rem] overflow-y-auto">
+            <div className="h-full bg-white  sm:w-[30rem] w-full min-w-[15rem] overflow-y-auto">
                 <div className="p-4 sm:p-7">
                     <div className="flex items-center justify-between">
                         <div className="w-full">
-                            <div className="flex items-center bg-white border border-gray-950 rounded-full shadow-sm px-4 py-2 sm:py-4 w-full mx-auto">
+                            <div className="flex items-center fixed w-96 bg-white border border-gray-950 rounded-full shadow-sm px-4 py-2 sm:py-4 mx-auto">
                                 <IoSearch className="text-gray-500 mr-2 sm:mr-3" size={20} />
                                 <input
                                     type="text"
@@ -33,11 +33,11 @@ const SearchTab = () => {
                     </div>
                 </div>
                 <div>
-                    <p className="mx-auto text-center mt-4 max-w-md text-gray-500">
+                    <p className="mx-auto text-center mt-12 max-w-md  text-gray-500">
                         All new Linen Shirts , Our Popular Products
                     </p>
                 </div>
-                <div className='section grid grid-cols-2'>
+                <div className='section grid grid-cols-2 gap-3'>
                     {products.map((product, key) =>
                         <ProductCard key={key} data={product} />
                     )}

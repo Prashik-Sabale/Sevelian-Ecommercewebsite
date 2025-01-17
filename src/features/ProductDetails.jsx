@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { addToCart } from '../stores/cart';
+import toast from "react-hot-toast";
 import { products } from '../Data/Products';
 import { useDispatch } from 'react-redux';
 
@@ -26,6 +27,7 @@ const ProductDetails = () => {
 
 
     const handleAddToCart = () => {
+        toast.success("Item added to your cart! 🎉");
         dispatch(addToCart({
             productId: detail.id,
             quantity: quantity
@@ -73,7 +75,7 @@ const ProductDetails = () => {
 
                                 <a href="#" class="ml-4 text-sm font-semibold text-black transition duration-100 hover:text-slate-900 active:text-indigo-700">view all 47 reviews</a>
                             </div>
-                            <div class="mb-4 md:mb-6">
+                            {/* <div class="mb-4 md:mb-6">
                                 <span class="mb-3 inline-block text-sm font-semibold text-gray-500 md:text-base">Color</span>
 
                                 <div class="flex flex-wrap gap-2">
@@ -82,7 +84,7 @@ const ProductDetails = () => {
                                     <button type="button" class="h-8 w-8 rounded-full border bg-gray-200 ring-2 ring-transparent ring-offset-1 transition duration-100 hover:ring-gray-200"></button>
                                     <button type="button" class="h-8 w-8 rounded-full border bg-white ring-2 ring-transparent ring-offset-1 transition duration-100 hover:ring-gray-200"></button>
                                 </div>
-                            </div>
+                            </div> */}
                             <div class="mb-8 md:mb-10">
                                 <span class="mb-3 inline-block text-sm font-semibold text-gray-500 md:text-base">Size</span>
 
@@ -111,8 +113,12 @@ const ProductDetails = () => {
                                 <span class="text-sm">2-4 day shipping</span>
                             </div>
                             <div className=' mb-5'>
-                                <div class="bg-green-500 w-4 h-4 rounded-full "></div>
-                                <p class="ml-[25px] text-xs mt-[-16px]">50+ pcs. in stock.</p>
+                                <div class="relative inline-flex">
+                                    <div class="w-4 h-4 bg-green-500 rounded-full"></div>
+                                    <div class="w-4 h-4 bg-green-500 rounded-full absolute top-0 left-0 animate-ping"></div>
+                                    <div class="w-4 h-4 bg-green-500 rounded-full absolute top-0 left-0 animate-pulse"></div>
+                                </div>
+                                <p class="ml-[25px] text-xs mt-[-22px]">50+ pcs. in stock.</p>
                             </div>
                             <div class="flex gap-2.5">
 

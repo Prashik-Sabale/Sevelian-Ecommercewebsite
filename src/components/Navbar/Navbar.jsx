@@ -24,7 +24,7 @@ const Navbar = () => {
     }, [carts])
 
     const [open, setOpen] = useState(false);
-    const [showModal, setshowModal] = useState(false);
+    // const [showModal, setshowModal] = useState(false);
 
 
     const [scroll, setScroll] = useState(false);
@@ -54,11 +54,11 @@ const Navbar = () => {
                                 <ul className="flex space-x-10 text-base font-bold text-black ">
                                     <li
                                         className="hover:underline hover:underline-offset-4 hover:w-fit transition-all duration-100 ease-linear">
-                                        <Link to="/Home">Home</Link>
+                                        <Link to="/home">Home</Link>
                                     </li>
                                     <li
                                         className="hover:underline hover:underline-offset-4 hover:w-fit transition-all duration-100 ease-linear">
-                                        <Link to="/Products">Product</Link>
+                                        <Link to="/products">Product</Link>
                                     </li>
 
                                     <li
@@ -86,7 +86,7 @@ const Navbar = () => {
 
                                 {/* {showModal && <Modal onclose={() => { setshowModal(false) }} />} */}
 
-                                <button className="flex items-center text-black  justify-center px-2 py-2 font-semibold" ><Link to='./Login'><FaRegUser className='text-xl' /></Link></button>
+                                <button className="flex items-center text-black  justify-center px-2 py-2 font-semibold" ><Link to='./login'><FaRegUser className='text-xl' /></Link></button>
 
                                 <div className=' relative cursor-pointer'  >
                                     <Link to='./cart'><IoBagOutline className='text-2xl' /></Link>

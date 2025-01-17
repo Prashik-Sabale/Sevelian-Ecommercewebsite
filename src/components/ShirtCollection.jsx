@@ -1,79 +1,82 @@
-import React, { useEffect } from 'react'
-import ProductCard from './ProductCard';
-import { products } from '../Data/Products';
-import axios from 'axios';
-
-// import { useEffect, useParams, useState } from 'react';
-// import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import ProductCard from "./ProductCard";
+import toast from "react-hot-toast";
 
 const ShirtCollection = () => {
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    const Axios = () => {
-        const getData = async () => {
+    useEffect(() => {
+        const fetchProducts = async () => {
+            try {
+                const response = await axios.get("http://localhost:8080/api/products");
+                const productsWithImages = await Promise.all(
+                    response.data.map(async (product) => {
+                        const imageResponse = await axios.get(
+                            `http://localhost:8080/api/product/${product.id}/image`,
+                            { responseType: "blob" }
+                        );
+                        product.image = URL.createObjectURL(imageResponse.data);
+                        return product;
+                    })
+                );
+                setProducts(productsWithImages);
+                setLoading(false);
+            } catch (err) {
+                setError(err.message);
+                setLoading(false);
+            }
+        };
 
-            axios.get("http://localhost:8080/api/products").then((res) => {
-                console.log(res);
+        fetchProducts();
+    }, []);
 
-            }).catch((err) => {
-                console.log(err);
-
-            })
-            // const res = await fetch("http://localhost:8080/api/products");
-            // const jsonData = await res.json();
-            // console.log(jsonData);
-        }
-
-        useEffect(() => {
-            getData()
-        }, [])
-
-    }
-
-    // const { id } = useParams();
-    // const [product, setProduct] = useState(null);
-    // useEffect(() => {
-    //     const fetchProduct = async () => {
-    //         try {
-    //             const response = await axios.get(`http://localhost:8080/api/product/${id}`);
-    //             setProduct(response.data);
-    //             console.log(response.data);
-    //         } catch (error) {
-    //             console.error("Error fetching product:", error);
-    //         }
-    //     };
-
-    //     fetchProduct();
-    // }, [id]);
-    // if (!product) {
-    //     return (
-    //         <h2 className="text-center" style={{ padding: "10rem" }}>
-    //             Loading...
-    //         </h2>
-    //     );
-    // }
-
-
-
-
-    return (
-        <div>
-            <div>
-                <header className="text-center">
-                    <h2 className="text-xl font-bold text-gray-900 sm:text-3xl p-8">Linen Shirt Collection</h2>
-
-                    <p className="mx-auto mt-4 max-w-md text-gray-500">
-                        All new Linen Shirts , Exclusively launched in sale. With stretch & an elevated look.
-                    </p>
-                </header>
-                <div className='section grid lg:grid-cols-3 md:grid-cols-2 gap-6 top-0  left-0 right-0 max-w-4xl xl:max-w-5xl mx-auto'>
-                    {products.map((product, key) =>
-                        <ProductCard key={key} data={product} />
-                    )}
+    if (loading) {
+        return (
+            <div className="flex justify-center items-center m-80">
+                <div className="relative w-16 h-16">
+                    <div className="absolute w-full h-full border-2 border-t-black border-r-transparent rounded-full animate-spin"></div>
                 </div>
             </div>
+        );
+    }
 
+    if (error) {
+        toast.error("Oops! Something went wrong.");
+        return (
+            <div>
+                <div className="bg-white py-6 sm:py-8 lg:py-12">
+                    <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+                        <div className="flex flex-col items-center">
+                            <h1 className=" text-center text-2xl font-bold text-gray-500 md:text-3xl">500 | Internal server error</h1>
+                            <p className="max-w-screen-md text-center font-bold text-gray-500 md:text-lg">Oops! Something went wrong. </p>
+                            <p className="mb-40 max-w-screen-md text-center font-semibold text-gray-500 md:text-xs">"Server Is Under Deployement" </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+    return (
+        <div>
+            <header className="text-center">
+                <h2 className="text-xl font-bold text-gray-900 sm:text-3xl p-8">
+                    Linen Shirt Collection
+                </h2>
+                <p className="mx-auto mt-4 max-w-md text-gray-500">
+                    All new Linen Shirts, Exclusively launched in sale. With stretch &
+                    an elevated look.
+                </p>
+            </header>
+            <div className="section grid lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-4xl xl:max-w-5xl mx-auto">
+                {products.map((product) => (
+                    <ProductCard key={product.id} data={product} />
+                ))}
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default ShirtCollection
+export default ShirtCollection;
