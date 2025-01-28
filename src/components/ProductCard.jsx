@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ data }) => {
-    const { id, name, price, image, shortdsc, slug } = data;
+    const { id, name, price, image, shortdsc, slug, discount } = data;
     const dispatch = useDispatch();
 
     const handleAddToCart = () => {
@@ -31,6 +31,7 @@ const ProductCard = ({ data }) => {
                 <div className="flex justify-start">
                     <div className="text-gray-600 text-base">{shortdsc}</div>
                 </div>
+
                 <div className="mt-2 mb-5 flex items-center justify-between">
                     <p>
                         <span className="text-xl text-slate-900">₹ {price}</span>

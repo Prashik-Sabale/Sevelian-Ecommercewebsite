@@ -11,11 +11,11 @@ const ShirtCollection = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/api/products");
+                const response = await axios.get("http://localhost:5000/api/products");
                 const productsWithImages = await Promise.all(
                     response.data.map(async (product) => {
                         const imageResponse = await axios.get(
-                            `http://localhost:8080/api/product/${product.id}/image`,
+                            `http://localhost:5000/api/product/${product.id}/image`,
                             { responseType: "blob" }
                         );
                         product.image = URL.createObjectURL(imageResponse.data);
@@ -40,6 +40,7 @@ const ShirtCollection = () => {
                     <div className="absolute w-full h-full border-2 border-t-black border-r-transparent rounded-full animate-spin"></div>
                 </div>
             </div>
+
         );
     }
 
