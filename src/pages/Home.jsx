@@ -47,10 +47,11 @@ const Home = () => {
                         <div><Link to="/TShirts"><img src={cat2} className="h-30 w-40 rounded-full cursor-pointer" alt="" /></Link>T-Shirts</div>
                     </div>
                 </div>
+
+                <ShowCards />
                 <Sale />
                 <BestSelling />
                 <LinenInfo />
-                <ShowCards />
                 <Support />
             </div>
         </div>

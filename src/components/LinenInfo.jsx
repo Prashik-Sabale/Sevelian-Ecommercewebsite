@@ -9,16 +9,6 @@ const LinenInfo = () => {
             <section>
                 <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8  ">
                     <div className="space-y-4 md:space-y-8 ">
-                        <div className="max-w-xl">
-                            <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl">
-                                Effortless Style with Linen Shirts
-                            </h2>
-
-                            <p className="mt-4 text-gray-700">
-                                Linen shirts are the ultimate blend of comfort and sophistication. Perfect for warm weather, linen's breathable and lightweight texture keeps you cool while exuding effortless elegance. With their natural fibers and crisp yet relaxed look, linen shirts are a wardrobe essential for anyone who values style and comfort.
-                            </p>
-                        </div>
-
                         <section className='overflow-hidden rounded-lg '>
                             <img
                                 src={bgimage}
@@ -26,6 +16,16 @@ const LinenInfo = () => {
                                 alt=""
                             />
                         </section>
+                        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+                            <div class="rounded-lg bg-gray-100 px-4 py-6 md:py-8 lg:py-12">
+                                {/* <p class="mb-2 text-center font-semibold text-slate-900 md:mb-3 lg:text-lg">Sevelian </p> */}
+
+                                <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">Effortless Style with Linen Shirts
+                                </h2>
+
+                                <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">Linen shirts are the ultimate blend of comfort and sophistication. Perfect for warm weather, linen's breathable and lightweight texture keeps you cool while exuding effortless elegance. With their natural fibers and crisp yet relaxed look, linen shirts are a wardrobe essential for anyone who values style and comfort. </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

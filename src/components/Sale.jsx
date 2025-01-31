@@ -10,10 +10,10 @@ const Sale = () => {
                         <div class="rounded-lg bg-gray-100 px-4 py-6 md:py-8 lg:py-12">
                             <p class="mb-2 text-center font-semibold text-slate-900 md:mb-3 lg:text-lg">Sevelian </p>
 
-                            <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">Be With Elegance
+                            <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">Shop by Taste
                             </h2>
 
-                            <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">Discover a collection of timeless wardrobe essentials, seamlessly transitioning from work to weekend. Inspired by travel, our America-designed pieces prioritize sustainability with natural fibers and mindful practices. Explore a range of Linen & Cotton </p>
+                            <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">Inspire and let yourself be inspired, from one unique fashion to another. </p>
                         </div>
                     </div>
                 </div>

@@ -45,7 +45,10 @@ const ShirtCollection = () => {
     }
 
     if (error) {
-        toast.error("Oops! Something went wrong.");
+        // toast.error("Oops! Something went wrong.");
+        toast.error('Oops! Something went wrong.', {
+            position: "top-center"
+        })
         return (
             <div>
                 <div className="bg-white py-6 sm:py-8 lg:py-12">
