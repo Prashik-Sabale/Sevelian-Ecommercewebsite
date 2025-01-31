@@ -10,7 +10,7 @@ const BestSelling = () => {
             <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
                 <div class="bg-white py-6 sm:py-8 lg:py-12">
                     <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-                        <div class="rounded-lg bg-gray-100 px-4 py-6 md:py-8 lg:py-12">
+                        <div class="rounded-lg px-4 py-6 md:py-8 lg:py-12">
                             <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">The Best Sellers
                             </h2>
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import bgimage from '../assets/images/outfit.jpg';
-// import bgimage from '../assets/images/outfit2.jpg';
-// import bigbg from '../assets/images/bigbg.png';
 
 const LinenInfo = () => {
     return (
@@ -17,7 +15,7 @@ const LinenInfo = () => {
                             />
                         </section>
                         <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-                            <div class="rounded-lg bg-gray-100 px-4 py-6 md:py-8 lg:py-12">
+                            <div class="rounded-lg px-4 py-6 md:py-8 lg:py-12">
                                 {/* <p class="mb-2 text-center font-semibold text-slate-900 md:mb-3 lg:text-lg">Sevelian </p> */}
 
                                 <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">Effortless Style with Linen Shirts
