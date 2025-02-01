@@ -35,7 +35,7 @@ const Home = () => {
                                 BEYOND ELEGANCE
                                 <strong className="font-extrabold text-red-700 sm:block"> THE VAULT </strong>
                             </h1>
-                            <div className="text-slate-200 font-extrabold mt-2">UP TO 70% OFF</div>
+                            {/* <div className="text-slate-200 font-extrabold mt-2">UP TO 70% OFF</div> */}
 
                             <div className="mt-8 flex flex-wrap justify-center gap-4">
                                 <Link
@@ -43,7 +43,7 @@ const Home = () => {
                                         setIsToggled(!isToggled);
                                     }}
                                     type="button"
-                                    className="block w-full rounded-full bg-black px-12 py-3 text-sm font-medium text-white shadow sm:w-auto"
+                                    className="block w-full rounded-full bg-transparent border-2 border-white px-12 py-3 text-sm font-medium text-white shadow sm:w-auto"
                                     to="/Shirts"
                                 >
                                     Shop Now

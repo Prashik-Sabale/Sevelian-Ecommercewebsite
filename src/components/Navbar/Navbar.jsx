@@ -34,6 +34,8 @@ const Navbar = () => {
         });
     }, []);
 
+    // className={`transition-all duration-500 ${scroll ? 'bg-white bg-opacity-90 shadow-lg' : 'bg-transparent'} flex justify-between items-center px-10 py-4`}
+
     return (
         <div>
             <div className=' w-full'>
@@ -42,7 +44,7 @@ const Navbar = () => {
                         <pre>AVAIL 15% OFF ON ALL ORDERS ABOVE ₹3500                                                    AVAIL 15% OFF ON ALL ORDERS ABOVE ₹3500                                                      AVAIL 15% OFF ON ALL ORDERS ABOVE ₹3500  </pre>
                     </marquee>
                 </div>
-                <div className="top-0 py-1 z-50  sticky  lg:py-2 w-full  lg:relative ">
+                <div className="top-0 py-1 sticky lg:py-2 w-full lg:relative ">
                     <nav className={`${scroll ? "fixed bg-white w-full  rounded-full  top-5 left-0 right-0 " : ""}z-10 top-0  left-0 right-0 max-w-4xl xl:max-w-5xl mx-auto px-5 py-2.5 lg:border-none lg:py-4`}>
                         <div className="flex  items-center justify-between">
                             <button>
@@ -80,8 +82,6 @@ const Navbar = () => {
                                 </ul>
                             </div>
                             <div className="hidden lg:flex lg:items-center gap-x-3">
-
-
                                 <button onClick={() => dispatch(openTab())} className="flex items-center text-black  justify-center px-2 py-2 font-semibold"><IoSearch className='text-xl' /></button>
 
                                 {/* {showModal && <Modal onclose={() => { setshowModal(false) }} />} */}
