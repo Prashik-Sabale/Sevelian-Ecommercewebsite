@@ -5,6 +5,7 @@ import React from 'react';
 import sampleVideo1 from "../assets/videos/video1.mp4";
 import sampleVideo2 from "../assets/videos/video2.mp4";
 import sampleVideo3 from "../assets/videos/video3.mp4";
+import TheSection from './TheSection';
 
 
 const ShowCards = () => {
@@ -37,6 +38,9 @@ const ShowCards = () => {
                             Your browser does not support the video tag.
                         </video>
                     ))}
+                </div>
+                <div>
+                    <TheSection />
                 </div>
             </div>
         </>

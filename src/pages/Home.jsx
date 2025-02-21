@@ -36,32 +36,32 @@ const Home = () => {
                                 <strong className="font-extrabold text-red-700 sm:block"> THE VAULT </strong>
                             </h1>
                             {/* <div className="text-slate-200 font-extrabold mt-2">UP TO 70% OFF</div> */}
-
                             <div className="mt-8 flex flex-wrap justify-center gap-4">
                                 <Link
                                     onClick={() => {
                                         setIsToggled(!isToggled);
                                     }}
                                     type="button"
-                                    className="block w-full rounded-full bg-transparent border-2 border-white px-12 py-3 text-sm font-medium text-white shadow sm:w-auto"
+                                    className="block w-full sm:w-auto max-w-[200px] rounded-full bg-transparent border-2 border-white px-6 py-2 text-sm font-medium text-white shadow transition duration-300 hover:bg-white hover:text-black"
                                     to="/Shirts"
                                 >
                                     Shop Now
                                 </Link>
                             </div>
+
                         </div>
                     </div>
                 </section>
 
                 <div className="mx-auto max-w-7xl px-4  pt-10 sm:px-6 lg:px-8 relative text-center">
                     <span className="relative flex justify-center">
-                        <h1 className="relative z-10 bg-white text-3xl font-bold px-6 pb-3">Top Collections</h1>
+                        <h1 className="relative bg-white text-3xl font-bold px-6 pb-3">Top Collections</h1>
                     </span>
                     <span className=' pt-3 text-gray-500 '>Express your style with our standout collection—fashion meets sophistication.</span><br /><br />
 
-                    <div className='container flex justify-center pt-8 gap-20'>
-                        <div><Link to="/Shirts"><img src={cat1} className="h-30 w-40 rounded-full cursor-pointer" alt="" /></Link>Shirts</div>
-                        <div><Link to="/TShirts"><img src={cat2} className="h-30 w-40 rounded-full cursor-pointer" alt="" /></Link>T-Shirts</div>
+                    <div className='container flex justify-center z-0 pt-8 gap-20'>
+                        <div><Link to="/Shirts"><img src={cat1} className="h-30 z-0 w-40 rounded-full cursor-pointer" alt="" /></Link>Shirts</div>
+                        <div><Link to="/TShirts"><img src={cat2} className="h-30 w-40 z-0 rounded-full cursor-pointer" alt="" /></Link>T-Shirts</div>
                     </div>
                 </div>
 

@@ -73,7 +73,7 @@ const Navbar = () => {
                                     </li>
                                     {/* <NavLinks /> */}
                                     <ul
-                                        className={`fixed top-0 z-50 bg-black w-2/3 h-screen shadow-2xl
+                                        className={`fixed top-0 z-20 bg-black w-2/3 h-screen shadow-2xl
                                                 md:hidden flex flex-col gap-10  p-7 pt-20 duration-500
                                                 ${open ? "left-0" : "left-[-100%]"}`}
                                     >
@@ -81,7 +81,7 @@ const Navbar = () => {
                                     </ul>
                                 </ul>
                             </div>
-                            <div className="hidden lg:flex lg:items-center gap-x-3">
+                            <div className="hidden lg:flex z-20 lg:items-center gap-x-3">
                                 <button onClick={() => dispatch(openTab())} className="flex items-center text-black  justify-center px-2 py-2 font-semibold"><IoSearch className='text-xl' /></button>
 
                                 {/* {showModal && <Modal onclose={() => { setshowModal(false) }} />} */}
@@ -97,7 +97,7 @@ const Navbar = () => {
 
                             {/* Mobile Nav */}
                             <ul
-                                className={`fixed top-0 z-50 bg-white w-2/3 h-screen shadow-2xl
+                                className={`fixed top-0 z-20 bg-white w-2/3 h-screen shadow-2xl
                                         md:hidden flex flex-col gap-10 text-medium  p-7 pt-20 duration-500
                                         ${open ? "left-0" : "left-[-100%]"}`}
                             >

@@ -24,12 +24,13 @@ const BestSelling = () => {
                     )}
                 </div>
                 <div className=' text-center'>
-                    <Link to="/Shirts"><button onClick={() => { setIsToggle(!isToggle) }} className=" w-full md:w-auto mt-10 mb-14 inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-black shadow-xs  transition-all duration-500">Shop all
+                    <Link to="/Shirts"><button onClick={() => { setIsToggle(!isToggle) }} className=" w-full sm:w-auto max-w-[200px] rounded-full bg-transparent border-2 border-black px-6 py-2 text-sm font-medium  shadow transition md:w-auto mt-10 mb-14 inline-flex items-center justify-center text-center text-black hover:bg-black hover:text-white shadow-xs duration-300">View all
                     </button></Link>
                 </div>
             </div>
         </div>
     )
 }
+// block w-full sm:w-auto max-w-[200px] rounded-full bg-transparent border-2 border-white px-6 py-2 text-sm font-medium text-white shadow transition duration-300 hover:bg-white hover:text-black
 
 export default BestSelling
