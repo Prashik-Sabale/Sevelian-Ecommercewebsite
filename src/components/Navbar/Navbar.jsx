@@ -38,7 +38,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className=' w-full'>
+            <div className='relative w-full z-50'>
                 <div className="header__bar bg-black text-white">
                     <marquee scrollamount="10">
                         <pre>AVAIL 15% OFF ON ALL ORDERS ABOVE ₹3500                                                    AVAIL 15% OFF ON ALL ORDERS ABOVE ₹3500                                                      AVAIL 15% OFF ON ALL ORDERS ABOVE ₹3500  </pre>
@@ -97,7 +97,7 @@ const Navbar = () => {
 
                             {/* Mobile Nav */}
                             <ul
-                                className={`fixed top-0 z-20 bg-white w-2/3 h-screen shadow-2xl
+                                className={`fixed top-0 z-50 bg-white w-2/3 h-screen shadow-2xl
                                         md:hidden flex flex-col gap-10 text-medium  p-7 pt-20 duration-500
                                         ${open ? "left-0" : "left-[-100%]"}`}
                             >

@@ -18,7 +18,7 @@ const Home = () => {
                 <section className="relative w-full h-screen overflow-hidden">
                     {/* Background Video */}
                     <video
-                        className="absolute top-0 left-0 w-full h-full object-cover"
+                        className="absolute top-0 left-0 w-full h-full object-cover z-10"
                         autoPlay
                         loop
                         muted
@@ -29,7 +29,7 @@ const Home = () => {
                     </video>
 
                     {/* Overlay for text and buttons */}
-                    <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center z-20">
                         <div className="text-center text-white px-4">
                             <h1 className="text-3xl font-black sm:text-5xl">
                                 BEYOND ELEGANCE

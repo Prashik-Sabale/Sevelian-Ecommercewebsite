@@ -10,12 +10,13 @@ const ShirtCollection = () => {
 
     useEffect(() => {
         const fetchProducts = async () => {
+
             try {
-                const response = await axios.get("http://localhost:5000/api/products");
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/products`);
                 const productsWithImages = await Promise.all(
                     response.data.map(async (product) => {
                         const imageResponse = await axios.get(
-                            `http://localhost:5000/api/product/${product.id}/image`,
+                            `${process.env.REACT_APP_API_URL}/api/product/${product.id}/image`,
                             { responseType: "blob" }
                         );
                         product.image = URL.createObjectURL(imageResponse.data);
